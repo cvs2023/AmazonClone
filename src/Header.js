@@ -1,23 +1,23 @@
 import React from "react";
 import navLogo from "./images/amazon-logo.png";
+import cartIcon from "./images/cart-icon.png";
 import "./Header.css";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import SearchIcon from "@mui/icons-material/Search";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import IndianFlagIcon from "./images/Indian-Flag-icon.png";
 
 const Header = () => {
   return (
     <>
-      <div id="navbar" className=" bg-blue  sticky top-0 h-[60px] ">
-        <div className=" flex items-start pt-1">
+      <div id="navbar" className=" bg-blue  sticky top-0 ">
+        <div className=" flex items-start pt-1 ml-2">
           <div id="search-left " className="text-white  p-1 flex items-center ">
             <div className="text-white flex items-center ">
               <img alt="amazon logo" className="w-[97px]  ml-2" src={navLogo} />
               <div className="mb-[14px]">.in</div>
             </div>
             <div className=" text-white p-2 flex justify-center content-center leading-4 ">
-              <LocationOnIcon className="mt-2" />
+              <LocationOnIcon className="mt-1" />
               <div className="flex flex-col ">
                 <span className="text-[12px]">Hello</span>
                 <span className="font-bold text-[14px]">
@@ -26,9 +26,9 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div id="search-box" className=" text-white p-2 ">
-            <div className="flex  justify-center content-center rounded-l-lg rounded-r-lg">
-              <select className="rounded-l-lg w-[50px] text-[#6f7373]">
+          <div id="search-box" className=" text-white p-1 ">
+            <div className="flex bg-[#f3f3f3]  justify-center content-center rounded-l-lg rounded-r-lg">
+              <select className="rounded-l-lg w-[50px] text-[#555555] border-2 text-[12px] p-1 ">
                 <option value="">All</option>
                 <option value="">All Categories</option>
                 <option value="">Alexa Skills</option>
@@ -36,16 +36,16 @@ const Header = () => {
               </select>
 
               <input
-                className=" w-[458px] h-[40px]"
+                className=" w-[458px] p-2"
                 type="text"
                 placeholder="Search Amazon.in"
               ></input>
-              <div className="bg-[#febd69] rounded-r-lg p-[6px] pl-2">
-                <SearchIcon className=" text-[#333333]  rounded-r-lg search-icon" />
+              <div className="bg-[#febd69] rounded-r-lg w-[44px] h-[40px] p-[6px] pl-2">
+                <SearchIcon className=" text-[#333333]  rounded-r-lg search-icon " />
               </div>
             </div>
           </div>
-          <div id="search-right" className="flex justify-evenly gap-3 ml-5">
+          <div id="search-right" className="flex justify-evenly gap-6 ml-5">
             <div className="flex items-center">
               <img
                 src={IndianFlagIcon}
@@ -62,9 +62,9 @@ const Header = () => {
               <span className="text-[12px]">Returns</span>
               <span className="font-bold text-[14px]">& Orders</span>
             </div>
-            <div className=" text-white flex  justify-center content-center">
-              <AddShoppingCartIcon className="pl-[8px] pr-[8px] cart-icon" />
-              <div className="mt-6">Cart</div>
+            <div className=" text-white flex  justify-center content-center gap-0">
+              <img src={cartIcon} alt="cart" className="h-[42px] mt-1" />
+              <div className="mt-5">Cart</div>
             </div>
           </div>
         </div>
